@@ -1,0 +1,3 @@
+displayName = Too many Eaters
+author = Kammcorder
+version = 1
