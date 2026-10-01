@@ -50,12 +50,10 @@ public override void OnSpawn(NPC npc, IEntitySource source)
 			string path = variant switch
 			{
 				1 => "SpriteVariantsEoS/Assets/NPCs/EaterofSouls_1",
+			    2 => "SpriteVariantsEoS/Assets/NPCs/EaterofSouls_2",
 				_ => null
 			};
-			{
-				2 => "SpriteVariantsEoS/Assets/NPCs/EaterofSouls_2",
-				_ => null
-			};
+			
 
 			if (path == null)
 				return true;
