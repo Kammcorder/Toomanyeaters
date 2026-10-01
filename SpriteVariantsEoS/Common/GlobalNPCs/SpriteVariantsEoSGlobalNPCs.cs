@@ -24,12 +24,15 @@ public override void OnSpawn(NPC npc, IEntitySource source)
 
 		if (chance < 0.05f)
 		{
-			variant = 1; // 1% variant
+			variant = 1; // 5% variant
 		}
-		
+		else if (chance < 0.3f)
+		{
+			variant = 2; // 30% variant
+		}
 		else
 		{
-			variant = 0; // 95% normal
+			variant = 0; // 65% normal
 		}
 
 		npc.netUpdate = true;
@@ -47,6 +50,10 @@ public override void OnSpawn(NPC npc, IEntitySource source)
 			string path = variant switch
 			{
 				1 => "SpriteVariantsEoS/Assets/NPCs/EaterofSouls_1",
+				_ => null
+			};
+			{
+				2 => "SpriteVariantsEoS/Assets/NPCs/EaterofSouls_2",
 				_ => null
 			};
 
